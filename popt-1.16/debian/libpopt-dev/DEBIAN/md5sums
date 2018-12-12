@@ -1,0 +1,8 @@
+c725be8e804fdfb1d8034c4597dfc4c2  usr/include/popt.h
+2981e6a784b55ae1545854ef7509c3a9  usr/lib/x86_64-linux-gnu/libpopt.a
+414a2398cd3affb750f36cf25c1a9e04  usr/lib/x86_64-linux-gnu/pkgconfig/popt.pc
+60d287c690e1527b370c1aa0ca3163e7  usr/share/doc/libpopt-dev/README.Debian
+c3bd1db5fd8ba818cafeb424871975d9  usr/share/doc/libpopt-dev/changelog.Debian.gz
+b17546718b3319d906e55d8be8c19e0c  usr/share/doc/libpopt-dev/changelog.gz
+271befa400b6decc3762f10972327e94  usr/share/doc/libpopt-dev/copyright
+2461eb0cce9201db3b478e0bd61d9d8c  usr/share/man/man3/popt.3.gz

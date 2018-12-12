@@ -1,0 +1,28 @@
+<version>
+  1.15
+</version>
+
+<headers>
+  /dev/shm/all/popt/popt-1.16/popt.h
+</headers>
+
+<libs>
+  /dev/shm/all/popt/popt-1.16/.libs/libpopt.so
+</libs>
+
+<include_paths>
+  /dev/shm/all/popt/popt-1.16
+</include_paths>
+
+<gcc_options>
+  -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT
+</gcc_options>
+
+<opaque_types>
+</opaque_types>
+<skip_interfaces>
+</skip_interfaces>
+<include_preamble>
+</include_preamble>
+<libs_depend>
+</libs_depend>

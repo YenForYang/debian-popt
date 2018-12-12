@@ -1,0 +1,415 @@
+ dpkg-buildpackage -D -us -uc -ui -b -Jauto -Pnobiarch,nocheck,nodoc
+dpkg-buildpackage: info: source package popt
+dpkg-buildpackage: info: source version 1.16-11
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Michael Jeanson <mjeanson@debian.org>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --with autoreconf
+   dh_auto_clean
+	make -j1 distclean
+make[1]: Entering directory '/dev/shm/all/popt/popt-1.16'
+Making distclean in po
+make[2]: Entering directory '/dev/shm/all/popt/popt-1.16/po'
+rm -f *.insert-header
+rm -f remove-potcdate.sed
+rm -f stamp-poT
+rm -f core core.* popt.po popt.1po popt.2po *.new.po
+rm -fr *.o
+rm -f Makefile Makefile.in POTFILES *.mo
+make[2]: Leaving directory '/dev/shm/all/popt/popt-1.16/po'
+Making distclean in .
+make[2]: Entering directory '/dev/shm/all/popt/popt-1.16'
+rm -rf .libs _libs
+ rm -f test1 test2 tdict
+test -z "libpopt.la" || rm -f libpopt.la
+rm -f ./so_locations
+rm -f *.o
+test -z "testit.sh.log" || rm -f testit.sh.log
+test -z "testit.sh.trs" || rm -f testit.sh.trs
+test -z "test-suite.log" || rm -f test-suite.log
+rm -f *.lo
+rm -f *.tab.c
+test -z "m4/Makefile Doxyfile popt.pc popt.spec test-poptrc" || rm -f m4/Makefile Doxyfile popt.pc popt.spec test-poptrc
+test . = "." || test -z "" || rm -f 
+rm -f config.h stamp-h1
+rm -f libtool config.lt
+rm -rf .ccache
+rm -f TAGS ID GTAGS GRTAGS GSYMS GPATH tags
+rm -f cscope.out cscope.in.out cscope.po.out cscope.files
+make[2]: Leaving directory '/dev/shm/all/popt/popt-1.16'
+Making distclean in auto
+make[2]: Entering directory '/dev/shm/all/popt/popt-1.16/auto'
+rm -rf .libs _libs
+rm -rf descriptors_storage header_compile_errors test_results tests
+rm -f *.lo
+test -z "popt.xml types" || rm -f popt.xml types
+test . = "." || test -z "" || rm -f 
+rm -f Makefile
+make[2]: Leaving directory '/dev/shm/all/popt/popt-1.16/auto'
+rm -f config.status config.cache config.log configure.lineno config.status.lineno
+rm -f ./.deps/popt.Plo
+rm -f ./.deps/poptconfig.Plo
+rm -f ./.deps/popthelp.Plo
+rm -f ./.deps/poptint.Plo
+rm -f ./.deps/poptparse.Plo
+rm -f ./.deps/tdict.Po
+rm -f ./.deps/test1.Po
+rm -f ./.deps/test2.Po
+rm -f Makefile
+make[1]: Leaving directory '/dev/shm/all/popt/popt-1.16'
+   dh_autoreconf_clean
+   dh_clean
+FAKEROOTKEY=848236190 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules clean
+ debian/rules build
+dh build --with autoreconf
+   dh_update_autotools_config
+   dh_autoreconf
+Copying file ABOUT-NLS
+Copying file config.rpath
+Copying file m4/codeset.m4
+Copying file m4/extern-inline.m4
+Copying file m4/fcntl-o.m4
+Copying file m4/gettext.m4
+Copying file m4/glibc2.m4
+Copying file m4/glibc21.m4
+Copying file m4/iconv.m4
+Copying file m4/intdiv0.m4
+Copying file m4/intl.m4
+Copying file m4/intldir.m4
+Copying file m4/intlmacosx.m4
+Copying file m4/intmax.m4
+Copying file m4/inttypes-pri.m4
+Copying file m4/inttypes_h.m4
+Copying file m4/lcmessage.m4
+Copying file m4/lib-ld.m4
+Copying file m4/lib-link.m4
+Copying file m4/lib-prefix.m4
+Copying file m4/lock.m4
+Copying file m4/longlong.m4
+Copying file m4/nls.m4
+Copying file m4/po.m4
+Copying file m4/printf-posix.m4
+Copying file m4/progtest.m4
+Copying file m4/size_max.m4
+Copying file m4/stdint_h.m4
+Copying file m4/threadlib.m4
+Copying file m4/uintmax_t.m4
+Copying file m4/visibility.m4
+Copying file m4/wchar_t.m4
+Copying file m4/wint_t.m4
+Copying file m4/xsize.m4
+Copying file po/Makefile.in.in
+Copying file po/Makevars.template
+Copying file po/Rules-quot
+Use of uninitialized value $args[0] in split at /usr/bin/autoreconf line 495, <GEN2> line 6.
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+configure.ac:23: installing './compile'
+configure.ac:10: installing './install-sh'
+configure.ac:10: installing './missing'
+Makefile.am: installing './depcomp'
+parallel-tests: installing './test-driver'
+   dh_auto_configure
+	./configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --disable-maintainer-mode --disable-dependency-tracking
+configure: loading site script /usr/share/config.site
+checking build system type... (cached) x86_64-pc-linux-gnu
+checking host system type... (cached) x86_64-pc-linux-gnu
+checking target system type... (cached) x86_64-pc-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... (cached) gawk
+checking whether make sets $(MAKE)... (cached) yes
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether make supports the include directive... yes (GNU style)
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... (cached) o
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether icc accepts -g... (cached) yes
+checking for icc option to accept ISO C89... none needed
+checking whether icc understands -c and -o together... (cached) yes
+checking dependency style of icc... (cached) gcc3
+checking for icc option to accept ISO C99... none needed
+checking for icc option to accept ISO Standard C... (cached) none needed
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether icc accepts -g... (cached) yes
+checking for icc option to accept ISO C89... (cached) none needed
+checking whether icc understands -c and -o together... (cached) yes
+checking dependency style of icc... (cached) gcc3
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /bin/sed
+checking for grep that handles long lines and -e... (cached) /bin/grep
+checking for egrep... (cached) /bin/grep -E
+checking for fgrep... (cached) /bin/grep -F
+checking for ld used by icc... (cached) xild -m elf_x86_64
+checking if the linker (xild -m elf_x86_64) is GNU ld... (cached) yes
+checking for BSD- or MS-compatible name lister (nm)... (cached) /usr/bin/x86_64-linux-gnu-nm -B
+checking the name lister (/usr/bin/x86_64-linux-gnu-nm -B) interface... (cached) BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... (cached) 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for xild -m elf_x86_64 option to reload object files... (cached) -r
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... (cached) dlltool
+checking how to associate runtime and link libraries... (cached) printf %s\n
+checking for archiver @FILE support... (cached) @
+checking for strip... (cached) x86_64-linux-gnu-strip
+checking for ranlib... (cached) /usr/bin/x86_64-linux-gnu-ranlib
+checking command to parse /usr/bin/x86_64-linux-gnu-nm -B output from icc object... ok
+checking for sysroot... no
+checking for a working dd... (cached) /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... (cached) mt
+checking if mt is a manifest tool... no
+checking how to run the C preprocessor... icc -E
+checking for ANSI C header files... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for memory.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for dlfcn.h... (cached) yes
+checking for objdir... (cached) .libs
+checking if icc supports -fno-rtti -fno-exceptions... (cached) yes
+checking for icc option to produce PIC... (cached) -fpic
+checking if icc PIC flag -fpic works... (cached) yes
+checking if icc static flag -static works... (cached) yes
+checking if icc supports -c -o file.o... (cached) yes
+checking if icc supports -c -o file.o... (cached) yes
+checking whether the icc linker (xild -m elf_x86_64 -m elf_x86_64) supports shared libraries... xild: warning #10013: no objects specified for multi-file optimization
+xild: executing 'ld'
+yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether icc needs -traditional... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for library containing strerror... none required
+checking for float.h... (cached) yes
+checking for fnmatch.h... (cached) yes
+checking for glob.h... (cached) yes
+checking for langinfo.h... (cached) yes
+checking for libintl.h... (cached) yes
+checking for mcheck.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for setreuid... (cached) yes
+checking for getuid... (cached) yes
+checking for geteuid... (cached) yes
+checking for iconv... (cached) yes
+checking for mtrace... (cached) yes
+checking for __secure_getenv... no
+checking for secure_getenv... (cached) yes
+checking for setregid... (cached) yes
+checking for stpcpy... (cached) yes
+checking for strerror... (cached) yes
+checking for vasprintf... (cached) yes
+checking for srandom... (cached) yes
+checking whether NLS is requested... yes
+checking for msgfmt... (cached) /usr/bin/msgfmt
+checking for gmsgfmt... (cached) /usr/bin/msgfmt
+checking for xgettext... (cached) /usr/bin/xgettext
+checking for msgmerge... (cached) /usr/bin/msgmerge
+checking for ld used by icc... (cached) xild -m elf_x86_64
+checking if the linker (xild -m elf_x86_64) is GNU ld... (cached) yes
+checking for shared library run path origin... (cached) done
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... libc
+checking for iconv... (cached) yes
+checking for working iconv... ./configure: line 15701: test: =: unary operator expected
+yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating po/Makefile.in
+config.status: creating m4/Makefile
+config.status: creating Doxyfile
+config.status: creating Makefile
+config.status: creating popt.pc
+config.status: creating popt.spec
+config.status: creating test-poptrc
+config.status: creating auto/Makefile
+config.status: creating auto/popt.xml
+config.status: creating auto/types
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+   debian/rules override_dh_auto_build
+make[1]: Entering directory '/dev/shm/all/popt/popt-1.16'
+dh_auto_build -- V=1
+	make -j1 V=1
+make[2]: Entering directory '/dev/shm/all/popt/popt-1.16'
+make  all-recursive
+make[3]: Entering directory '/dev/shm/all/popt/popt-1.16'
+Making all in po
+make[4]: Entering directory '/dev/shm/all/popt/popt-1.16/po'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/dev/shm/all/popt/popt-1.16/po'
+Making all in .
+make[4]: Entering directory '/dev/shm/all/popt/popt-1.16'
+icc -DHAVE_CONFIG_H -I.  -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c -o test1.o test1.c
+/bin/bash ./libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I.  -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c -o popt.lo popt.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c popt.c  -fpic -o .libs/popt.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c popt.c -o popt.o >/dev/null 2>&1
+/bin/bash ./libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I.  -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c -o poptparse.lo poptparse.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c poptparse.c  -fpic -o .libs/poptparse.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c poptparse.c -o poptparse.o >/dev/null 2>&1
+/bin/bash ./libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I.  -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c -o poptconfig.lo poptconfig.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c poptconfig.c  -fpic -o .libs/poptconfig.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c poptconfig.c -o poptconfig.o >/dev/null 2>&1
+/bin/bash ./libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I.  -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c -o popthelp.lo popthelp.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c popthelp.c  -fpic -o .libs/popthelp.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c popthelp.c -o popthelp.o >/dev/null 2>&1
+/bin/bash ./libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I.  -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c -o poptint.lo poptint.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c poptint.c  -fpic -o .libs/poptint.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c poptint.c -o poptint.o >/dev/null 2>&1
+/bin/bash ./libtool  --tag=CC   --mode=link icc  -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -no-undefined -Wl,--version-script=./libpopt.vers -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax -o libpopt.la -rpath /usr/lib/x86_64-linux-gnu popt.lo poptparse.lo poptconfig.lo popthelp.lo poptint.lo  
+libtool: link: icc -shared  -fpic  .libs/popt.o .libs/poptparse.o .libs/poptconfig.o .libs/popthelp.o .libs/poptint.o    -g -O2 -fstack-protector-strong -march=native -Wl,--version-script=./libpopt.vers -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,--as-needed -Wl,--gc-sections -Wl,--relax   -Wl,-soname -Wl,libpopt.so.0 -o .libs/libpopt.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libpopt.so.0" && ln -s "libpopt.so.0.0.0" "libpopt.so.0")
+libtool: link: (cd ".libs" && rm -f "libpopt.so" && ln -s "libpopt.so.0.0.0" "libpopt.so")
+libtool: link: xiar cru .libs/libpopt.a  popt.o poptparse.o poptconfig.o popthelp.o poptint.o
+xiar: executing 'ar'
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: /usr/bin/x86_64-linux-gnu-ranlib .libs/libpopt.a
+libtool: link: ( cd ".libs" && rm -f "libpopt.la" && ln -s "../libpopt.la" "libpopt.la" )
+/bin/bash ./libtool  --tag=CC   --mode=link icc  -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT  -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax -o test1 test1.o libpopt.la 
+libtool: link: icc -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -o .libs/test1 test1.o  ./.libs/libpopt.so
+icc -DHAVE_CONFIG_H -I.  -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c -o test2.o test2.c
+/bin/bash ./libtool  --tag=CC   --mode=link icc  -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT  -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax -o test2 test2.o libpopt.la 
+libtool: link: icc -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -o .libs/test2 test2.o  ./.libs/libpopt.so
+icc -DHAVE_CONFIG_H -I.  -I. -I. -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -c -o tdict.o tdict.c
+/bin/bash ./libtool  --tag=CC   --mode=link icc  -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT  -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax -o tdict tdict.o libpopt.la 
+libtool: link: icc -g -O2 -fdebug-prefix-map=/dev/shm/all/popt/popt-1.16=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -W -D_GNU_SOURCE -D_REENTRANT -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -o .libs/tdict tdict.o  ./.libs/libpopt.so
+make[4]: Leaving directory '/dev/shm/all/popt/popt-1.16'
+Making all in auto
+make[4]: Entering directory '/dev/shm/all/popt/popt-1.16/auto'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/dev/shm/all/popt/popt-1.16/auto'
+make[3]: Leaving directory '/dev/shm/all/popt/popt-1.16'
+make[2]: Leaving directory '/dev/shm/all/popt/popt-1.16'
+make[1]: Leaving directory '/dev/shm/all/popt/popt-1.16'
+   dh_auto_test
+ fakeroot debian/rules binary
+dh binary --with autoreconf
+   dh_auto_test
+   dh_testroot
+   dh_prep
+   dh_auto_install
+	make -j1 install DESTDIR=/dev/shm/all/popt/popt-1.16/debian/tmp AM_UPDATE_INFO_DIR=no
+make[1]: Entering directory '/dev/shm/all/popt/popt-1.16'
+make  install-recursive
+make[2]: Entering directory '/dev/shm/all/popt/popt-1.16'
+Making install in po
+make[3]: Entering directory '/dev/shm/all/popt/popt-1.16/po'
+installing cs.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/cs/LC_MESSAGES/popt.mo
+installing da.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/da/LC_MESSAGES/popt.mo
+installing de.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/de/LC_MESSAGES/popt.mo
+installing eo.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/eo/LC_MESSAGES/popt.mo
+installing es.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/es/LC_MESSAGES/popt.mo
+installing fi.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/fi/LC_MESSAGES/popt.mo
+installing fr.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/fr/LC_MESSAGES/popt.mo
+installing ga.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/ga/LC_MESSAGES/popt.mo
+installing gl.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/gl/LC_MESSAGES/popt.mo
+installing hu.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/hu/LC_MESSAGES/popt.mo
+installing id.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/id/LC_MESSAGES/popt.mo
+installing is.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/is/LC_MESSAGES/popt.mo
+installing it.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/it/LC_MESSAGES/popt.mo
+installing ja.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/ja/LC_MESSAGES/popt.mo
+installing ko.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/ko/LC_MESSAGES/popt.mo
+installing lv.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/lv/LC_MESSAGES/popt.mo
+installing nb.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/nb/LC_MESSAGES/popt.mo
+installing nl.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/nl/LC_MESSAGES/popt.mo
+installing pl.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/pl/LC_MESSAGES/popt.mo
+installing pt.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/pt/LC_MESSAGES/popt.mo
+installing ro.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/ro/LC_MESSAGES/popt.mo
+installing ru.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/ru/LC_MESSAGES/popt.mo
+installing sk.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/sk/LC_MESSAGES/popt.mo
+installing sl.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/sl/LC_MESSAGES/popt.mo
+installing sv.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/sv/LC_MESSAGES/popt.mo
+installing th.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/th/LC_MESSAGES/popt.mo
+installing tr.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/tr/LC_MESSAGES/popt.mo
+installing uk.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/uk/LC_MESSAGES/popt.mo
+installing vi.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/vi/LC_MESSAGES/popt.mo
+installing wa.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/wa/LC_MESSAGES/popt.mo
+installing zh_TW.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/zh_TW/LC_MESSAGES/popt.mo
+installing zh_CN.gmo as /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/locale/zh_CN/LC_MESSAGES/popt.mo
+if test "popt" = "gettext-tools"; then \
+  /bin/mkdir -p /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    /usr/bin/install -m 644 ./$file \
+		    /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[3]: Leaving directory '/dev/shm/all/popt/popt-1.16/po'
+Making install in .
+make[3]: Entering directory '/dev/shm/all/popt/popt-1.16'
+make[4]: Entering directory '/dev/shm/all/popt/popt-1.16'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/dev/shm/all/popt/popt-1.16/debian/tmp/usr/include'
+ /usr/bin/install -m 644 popt.h '/dev/shm/all/popt/popt-1.16/debian/tmp/usr/include'
+ /bin/mkdir -p '/dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/man/man3'
+ /usr/bin/install -m 644 'popt.3' '/dev/shm/all/popt/popt-1.16/debian/tmp/usr/share/man/man3/x86_64-linux-gnu-popt.3'
+ /bin/mkdir -p '/dev/shm/all/popt/popt-1.16/debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig'
+ /usr/bin/install -m 644 popt.pc '/dev/shm/all/popt/popt-1.16/debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig'
+ /bin/mkdir -p '/dev/shm/all/popt/popt-1.16/debian/tmp/usr/lib/x86_64-linux-gnu'
+ /bin/bash ./libtool   --mode=install /usr/bin/install   libpopt.la '/dev/shm/all/popt/popt-1.16/debian/tmp/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install .libs/libpopt.so.0.0.0 /dev/shm/all/popt/popt-1.16/debian/tmp/usr/lib/x86_64-linux-gnu/libpopt.so.0.0.0
+libtool: install: (cd /dev/shm/all/popt/popt-1.16/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libpopt.so.0.0.0 libpopt.so.0 || { rm -f libpopt.so.0 && ln -s libpopt.so.0.0.0 libpopt.so.0; }; })
+libtool: install: (cd /dev/shm/all/popt/popt-1.16/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libpopt.so.0.0.0 libpopt.so || { rm -f libpopt.so && ln -s libpopt.so.0.0.0 libpopt.so; }; })
+libtool: install: /usr/bin/install .libs/libpopt.lai /dev/shm/all/popt/popt-1.16/debian/tmp/usr/lib/x86_64-linux-gnu/libpopt.la
+libtool: install: /usr/bin/install .libs/libpopt.a /dev/shm/all/popt/popt-1.16/debian/tmp/usr/lib/x86_64-linux-gnu/libpopt.a
+libtool: install: chmod 644 /dev/shm/all/popt/popt-1.16/debian/tmp/usr/lib/x86_64-linux-gnu/libpopt.a
+libtool: install: /usr/bin/x86_64-linux-gnu-ranlib /dev/shm/all/popt/popt-1.16/debian/tmp/usr/lib/x86_64-linux-gnu/libpopt.a
+libtool: warning: remember to run 'libtool --finish /usr/lib/x86_64-linux-gnu'
+make[4]: Leaving directory '/dev/shm/all/popt/popt-1.16'
+make[3]: Leaving directory '/dev/shm/all/popt/popt-1.16'
+Making install in auto
+make[3]: Entering directory '/dev/shm/all/popt/popt-1.16/auto'
+make[4]: Entering directory '/dev/shm/all/popt/popt-1.16/auto'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/dev/shm/all/popt/popt-1.16/auto'
+make[3]: Leaving directory '/dev/shm/all/popt/popt-1.16/auto'
+make[2]: Leaving directory '/dev/shm/all/popt/popt-1.16'
+make[1]: Leaving directory '/dev/shm/all/popt/popt-1.16'
+   dh_install
+dh_install: Cannot find (any matches for) "usr/share/man/man3/popt.3" (tried in ., debian/tmp)
+
+dh_install: libpopt-dev missing files: usr/share/man/man3/popt.3
+dh_install: missing files, aborting
+make: *** [debian/rules:9: binary] Error 25
+FAKEROOTKEY=1106793928 LD_LIBRARY_PATH=:/opt/intel/lib/intel64_lin:/opt/intel/tbb/lib/intel64/gcc4.7 LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libfakeroot/libfakeroot-sysv.so debian/rules binary
+ dpkg-genbuildinfo --build=binary
+dpkg-genbuildinfo: error: binary build with no binary artifacts found; .buildinfo is meaningless
+dpkg-buildpackage: error: dpkg-genbuildinfo --build=binary subprocess returned exit status 25

@@ -1,0 +1,4 @@
+libpopt-dev_1.16-11_amd64.deb libdevel optional
+libpopt0-dbgsym_1.16-11_amd64.deb debug optional automatic=yes
+libpopt0-udeb_1.16-11_amd64.udeb debian-installer optional
+libpopt0_1.16-11_amd64.deb libs optional
